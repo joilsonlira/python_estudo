@@ -7,7 +7,9 @@
 """
 from random import sample
 
+
 conjunto = [2,16,27, 40, 47, 48]
+
 
 def full_aleatorio(range_inicio,range_fim,quantidade_dezenas,quantidade_aposta):
 
@@ -25,27 +27,6 @@ def full_aleatorio(range_inicio,range_fim,quantidade_dezenas,quantidade_aposta):
 
     return dezenas_aleatorias
 
-
-
-
-def repetidos(sorteados, aposta):
-    """
-    descrição: removendo conjuntos existentes 
-    valores de entrada: int array
-
-    """
-    dezenas = []
-    del dezenas[:]
-    
-    for i in range(len(sorteados)):
-        for k in range(len(aposta)):
-            if sorteados[i] == aposta[k]:
-                dezenas.append(sorteados[i])
-
-                
-    return sorted(dezenas)
-
-    
 
 
 p = full_aleatorio(1,100,20,10)
