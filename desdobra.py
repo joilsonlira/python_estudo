@@ -6,6 +6,8 @@
 
 """
 from random import sample
+from verify import *
+from estruturar_dados import *
 
 
 conjunto = [2,16,27, 40, 47, 48]
@@ -26,6 +28,8 @@ def full_aleatorio(range_inicio,range_fim,quantidade_dezenas,quantidade_aposta):
         dezenas_aleatorias.append(sorted(sample(range(range_inicio, range_fim + 1), quantidade_dezenas)))
 
     return dezenas_aleatorias
+
+
 
 
 

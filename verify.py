@@ -40,5 +40,5 @@ def repetidos(sorteados, aposta):
 
                 
     return sorted(dezenas)
-
-
+print(concurso_loto_mania[0]["dezenas"])
+# print(repetidos(concurso_loto_mania[0]["dezenas"], [2,16,27, 40, 47, 48]))
