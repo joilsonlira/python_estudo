@@ -29,7 +29,7 @@ def full_aleatorio(range_inicio,range_fim,quantidade_dezenas,quantidade_aposta):
 
 
 
-p = full_aleatorio(1,100,20,10)
+p = full_aleatorio(1,25,15,10)
 
 for i in range(len(p)):
     print(p[i])

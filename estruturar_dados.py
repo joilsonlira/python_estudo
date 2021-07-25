@@ -41,6 +41,29 @@ def estrutura_concurso(a):
             
     return aposta
 
+def conjuntos_repetidos_estruturado(conjunto):
+
+    conc = 0
+    contador = 0
+    repeticao = 0
+
+    concursos_repeticoes = []
+    del concursos_repeticoes[:]
+
+    for i in range(len(conjunto)):
+        if concurso_mega[conc]["dezenas"].count(conjunto[i]):
+            contador = contador + 1
+            if contador == len(conjunto):
+                repeticao = repeticao + 1
+                concursos_repeticoes.append(concurso_mega[conc]["concurso"])
+
+
+        conjuntos={
+            "conjunto": conjunto,
+            "repeticoes_conjunto":repeticao,
+            "concursos_conjunto": sorted(concursos_repeticoes)
+            }
+    return conjuntos
 
 with open(jogo_csv, newline='') as f:
     reader = csv.reader(f)

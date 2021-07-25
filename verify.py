@@ -26,7 +26,7 @@ def quantas_apareceu(dezenas):
 
 def repetidos(sorteados, aposta):
     """
-    descrição: removendo conjuntos existentes 
+    descrição: 
     valores de entrada: int array
 
     """
@@ -42,39 +42,3 @@ def repetidos(sorteados, aposta):
     return sorted(dezenas)
 
 
-
-conj = [5,33,52]
-
-conc = 0
-contador = 0
-repeticao = 0
-
-concursos_repeticoes = []
-del concursos_repeticoes[:]
-
-for i in range(len(conj)):
-    if concurso_mega[conc]["dezenas"].count(conj[i]):
-        contador = contador + 1
-        if contador == len(conj):
-            repeticao = repeticao + 1
-            concursos_repeticoes.append(concurso_mega[conc]["concurso"])
-
-print(repeticao)
-
-if len(conj) >= 4:
-    conjuntos={
-        "conjunto": conj,
-        "repeticoes_conjunto":repeticao,
-        "concursos_conjunto": sorted(concursos_repeticoes)
-        }
-    
-
-
-
-
-
-# print(concurso_mega[0])
-# print(concurso_loto_facil[0])
-# print(concurso_loto_mania[20])
-# conj = conjuntos_repetidos(concurso_mega[0]["dezenas"],concurso_mega[1]["dezenas"])
-# print(conj)
