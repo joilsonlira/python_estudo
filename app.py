@@ -1,3 +1,4 @@
+from dynaconf import FlaskDynaconf
 from flask import Flask,render_template
 from flask.templating import render_template
 
