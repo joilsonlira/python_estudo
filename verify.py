@@ -6,30 +6,30 @@
 3- Verificar se tem padroes nestes grupos (tipos de numeros, intervalo de surgimento, etc )
 
 '''
-from estruturar_dados import *
+from estruturar_dados import csv_dados
 
+def quantas_apareceu(loteria,dezena):
+    """[Conta quantas vezes uma dezena apareceu no historico de uma loteria espesifica.]
 
-def quantas_apareceu(dezenas):
+    Args:
+        loteria (INT): [0 para Megasena; 1 para LotoFacil; 2 para LotoMania.]
+        dezena (INT): [dezena que deseja verificar quantas vezes apareceu no historico da loteria desejada.]
+
+    Returns:
+        quantidade [INT]: [quantidade de vezes que a dezena informada apareceu em todos os jogos da loteria desejada.]
+    """
+
+    p = csv_dados(loteria)
     quantidade = 0
-    for a in range(i):
-        if jogo_csv == "mega_sena.csv":
-            quantidade = quantidade + concurso_mega[a]["dezenas"].count(dezenas)
 
-        if jogo_csv == "loto_facil.csv":
-            quantidade = quantidade + concurso_loto_facil[a]["dezenas"].count(dezenas)
-
-        if jogo_csv == "loto_mania.csv":
-            quantidade = quantidade + concurso_loto_mania[a]["dezenas"].count(dezenas)
+    for a in range(len(p)):
+            quantidade = quantidade + p[a]["dezenas"].count(dezena)
 
     return quantidade
 
 
 def repetidos(sorteados, aposta):
-    """
-    descrição: 
-    valores de entrada: int array
 
-    """
     dezenas = []
     del dezenas[:]
     
@@ -40,5 +40,3 @@ def repetidos(sorteados, aposta):
 
                 
     return sorted(dezenas)
-print(concurso_loto_mania[0]["dezenas"])
-# print(repetidos(concurso_loto_mania[0]["dezenas"], [2,16,27, 40, 47, 48]))
