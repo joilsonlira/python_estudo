@@ -9,7 +9,7 @@
 from estruturar_dados import csv_dados
 
 def quantas_apareceu(loteria,dezena):
-    """[Conta quantas vezes uma dezena apareceu no historico de uma loteria espesifica.]
+    """[Conta quantas vezes uma dezena apareceu no histórico de uma loteria espesifica.]
 
     Args:
         loteria (INT): [0 para Megasena; 1 para LotoFacil; 2 para LotoMania.]
@@ -28,7 +28,18 @@ def quantas_apareceu(loteria,dezena):
     return quantidade
 
 
+
+
 def repetidos(sorteados, aposta):
+    """[Verifica se tem numeros repetidos entre os números sorteados e os números apostados]
+
+    Args:
+        sorteados (LIST INT): [Lista com os numeros sorteados]
+        aposta (LIST INT): [Lista com os numeros apostados]
+
+    Returns:
+        [LIST INT]: [Dezenas que se repetiram entre os números sorteados e os números apostados]
+    """
 
     dezenas = []
     del dezenas[:]
@@ -40,3 +51,33 @@ def repetidos(sorteados, aposta):
 
                 
     return sorted(dezenas)
+
+
+
+def par_impar(numero):
+    if (numero%2) == 0:
+        return True
+    else:
+        return False
+
+def multiploDe(numero,multiplo):
+    if not (numero%multiplo):
+        return True
+    else:
+        return False
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
